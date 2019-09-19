@@ -1,0 +1,10 @@
+.title {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.productlist {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}

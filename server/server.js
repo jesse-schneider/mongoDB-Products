@@ -26,6 +26,7 @@ MongoClient.connect(url, {poolSize:10, useNewUrlParser: true, useUnifiedTopology
     require('./db code/add.js')(db, app);
     require('./db code/remove.js')(db, app, ObjectID);
     require('./db code/update.js')(db, app, ObjectID);
+    require('./db code/readItem.js')(db, app, ObjectID);
     require('./db code/read.js')(db, app);
     client.close();
 });
