@@ -6,11 +6,11 @@ module.exports = function (database, app, ObjectID) {
       return res.sendStatus(400);
     }
 
-    productID = req.body.productid;
-    var objectid = new ObjectID(productID);
+    var objectid = new ObjectID(req.body.id);
     const collection = database.collection('products');
 
     collection.deleteOne({_id: objectid}, (err, docs) => {
+      if (err) throw err;
         collection.find({}).toArray((err, data) => {
             res.send(data);
         });

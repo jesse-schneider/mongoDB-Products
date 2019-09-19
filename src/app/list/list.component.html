@@ -11,15 +11,15 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>test</td>
+    <tr *ngFor="let product of products">
+      <th scope="row">{{product.id}}</th>
+      <td>{{product.name}}</td>
+      <td>{{product.description}}</td>
+      <td>${{product.price}}</td>
+      <td>{{product.units}}</td>
       <td>
-        <button type="button" class="btn btn-primary btn-sm">Small button</button>
-        <button type="button" class="btn btn-primary btn-sm">Small button</button>
+        <button type="button" [routerLink]="['/update', product._id]" class="btn btn-primary btn-sm">Edit</button> &nbsp;
+        <button type="button" (click)="removeProduct(product._id)" class="btn btn-primary btn-sm">Delete</button>
     </td>
   </tbody>
 </table>

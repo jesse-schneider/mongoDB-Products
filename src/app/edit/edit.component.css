@@ -1,0 +1,11 @@
+.newProductForm {
+  margin-top: 50px;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  margin-top: 10px;
+  text-align: center;
+}
